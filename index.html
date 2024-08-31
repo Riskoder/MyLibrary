@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Library</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <h1 class="title large">My Library</h1>
+        <button
+          onclick="showBookDialog(true)"
+          id="add-book"
+          class="btn add-book">
+          Add Book
+        </button>
+      </div>
+      <dialog id="book-dialog">
+        <div class="dialog-wrapper">
+          <h2>Add Your Book</h2>
+          <form id="book-form" action="#" method="dialog">
+            <label for="b-title">
+              <h3>Book Title: <span style="color: red">*</span></h3>
+            </label>
+            <input id="b-title" type="text" required autocomplete="off" />
+            <label for="b-author">
+              <h3>Book Author: <span style="color: red">*</span></h3>
+            </label>
+            <input id="b-author" type="text" required autocomplete="off" />
+            <label for="b-n-pages">
+              <h3>Number of Pages: <span style="color: red">*</span></h3>
+            </label>
+            <input id="b-n-pages" type="number" required autocomplete="off" />
+            <label for="b-read">
+              <h3>Have you read the book?</h3>
+              <input id="b-read-check" type="checkbox" />
+            </label>
+            <button class="add-book-button" type="submit">Add Book</button>
+            <button
+              onclick="showBookDialog(false)"
+              id="book-cancel"
+              type="button"
+              formnovalidate>
+              Cancel
+            </button>
+          </form>
+        </div>
+      </dialog>
+    </header>
+    <main class="main">
+      <section class="container">
+        <template id="book-card-template">
+          <div class="book-card">
+            <div class="card-header">
+              <h2 class="book-title medium"></h2>
+              <p class="by">By</p>
+              <h3 class="book-author"></h3>
+            </div>
+            <div class="card-book-info">
+              <div class="book-info pages">
+                <span class="material-symbols-outlined">auto_stories</span>
+                <p class="book-pages"></p>
+              </div>
+              <div class="book-info status">
+                <span class="material-symbols-outlined">flag</span>
+                <p class="book-status"></p>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn book-readed">
+                <p class="small">Mark as Read</p>
+              </button>
+              <button class="btn book-delete">
+                <p class="small">delete</p>
+              </button>
+            </div>
+          </div>
+        </template>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
