@@ -165,7 +165,8 @@ form input {
 }
 
 .book-readed,
-.add-book {
+.add-book,
+.add-book-button {
   background-color: #5cbebe;
   max-width: 200px;
   padding: 8px 20px;
@@ -179,4 +180,8 @@ form input {
 
 .add-book {
   margin-left: auto;
+}
+
+.add-book-button {
+  margin: 0 auto;
 }
