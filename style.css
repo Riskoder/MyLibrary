@@ -97,7 +97,6 @@ form input {
   border-radius: 10px 10px 0 0;
   background-color: rgba(128, 128, 128, 0.243);
   word-wrap: break-word;
-  word-break: break-all;
 }
 
 .book-title {
